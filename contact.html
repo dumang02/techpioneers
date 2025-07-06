@@ -76,6 +76,7 @@
 				font-size: 14px;
 			}
 		}
+
 		.navbar-nav .nav-link {
 			color: #fff;
 			text-decoration: none;
@@ -89,7 +90,7 @@
 			color: #00bfff !important;
 			text-decoration: underline;
 			font-weight: 600;
-		} */ 
+		} */
 
 		.navbar-nav .nav-link.active::after {
 			content: "";
@@ -100,6 +101,25 @@
 			height: 3px;
 			background-color: #ff0000;
 			border-radius: 2px;
+		}
+
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background-color: #f8f9fa;
+			padding: 40px;
+		}
+
+		.contact-form {
+			background: #fff;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		}
+
+		.form-title {
+			margin-bottom: 25px;
+			font-weight: 600;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -192,56 +212,43 @@
 
 	<section class="ftco-section">
 		<div class="container">
-			<div class="row no-gutters">
-				<!-- Left Column: Text -->
-				<div class="col-md-6 d-flex align-items-center">
-					<div class="p-5">
-						<h2 class="mb-4">Get in touch</h2>
-						<p>Share your inquiries, feedback, or any assistance you may need, and our dedicated team will
-							promptly respond to ensure your satisfaction.</p>
-					</div>
+		  <div class="contact-form mt-5">
+			<h2 class="form-title">Contact Tech Pioneers</h2>
+			<form id="contactForm">
+			  <!-- Name and Email -->
+			  <div class="form-row">
+				<div class="form-group col-md-6">
+				  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
 				</div>
-
-				<!-- Right Column: Background image + Form -->
-				<div class="col-md-6 d-flex align-items-stretch"
-					style="position: relative; background-image: url('images/bg_3.jpg'); background-size: cover; background-position: center;">
-					<div class="p-5 bg-light w-100" style="position: relative; z-index: 1;">
-						<form action="send.php" method="POST" class="contact-form">
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<input type="text" name="name" class="form-control" placeholder="Your name"
-										required>
-								</div>
-								<div class="form-group col-md-6">
-									<input type="email" name="email" class="form-control"
-										placeholder="Your email address" required>
-								</div>
-							</div>
-
-							<div class="form-group">
-								<input type="text" name="phone" class="form-control" placeholder="Your Phone" required>
-							</div>
-
-							<div class="form-group">
-								<textarea name="message" class="form-control" rows="5" placeholder="Your message..."
-									required></textarea>
-							</div>
-
-							<div class="form-group form-check">
-								<input type="checkbox" class="form-check-input" name="consent" id="consent" required>
-								<label class="form-check-label" for="consent">I agree to be contacted by Tech
-									Pioneers.</label>
-							</div>
-
-							<div class="form-group text-center">
-								<button type="submit" class="btn btn-primary px-5 py-3">SEND MESSAGE</button>
-							</div>
-						</form>
-					</div>
+				<div class="form-group col-md-6">
+				  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
 				</div>
-			</div>
+			  </div>
+	
+			  <!-- Phone -->
+			  <div class="form-group">
+				<input type="text" name="phone" class="form-control" placeholder="Your Phone Number" required>
+			  </div>
+	
+			  <!-- Message -->
+			  <div class="form-group">
+				<textarea name="message" rows="5" class="form-control" placeholder="Your Message" required></textarea>
+			  </div>
+	
+			  <!-- Consent -->
+			  <div class="form-group form-check">
+				<input type="checkbox" class="form-check-input" name="consent" id="consent" required>
+				<label class="form-check-label" for="consent">I agree to be contacted by Tech Pioneers.</label>
+			  </div>
+	
+			  <!-- Submit -->
+			  <div class="form-group text-center">
+				<button type="submit" class="btn btn-primary px-4 py-2">SEND MESSAGE</button>
+			  </div>
+			</form>
+		  </div>
 		</div>
-	</section>
+	  </section>
 
 	<footer class="ftco-footer ftco-footer-2 ftco-section">
 		<div class="container">
@@ -321,14 +328,45 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-		// Get current page URL
-		const currentPage = window.location.pathname.split("/").pop();
-
-		// Loop through all navbar links
-		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-			if (link.getAttribute('href') === currentPage || link.getAttribute('href') === "") {
-				link.classList.add("active");
+		document.getElementById("contactForm").addEventListener("submit", function (e) {
+		  e.preventDefault();
+	
+		  const form = this;
+		  const formData = new FormData(form);
+	
+		  const name = form.querySelector('[name="name"]').value;
+		  const email = form.querySelector('[name="email"]').value;
+		  const phone = form.querySelector('[name="phone"]').value;
+		  const message = form.querySelector('[name="message"]').value;
+	
+		  alert(`✅ Your message will be sent:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
+	
+		  fetch("https://formsubmit.co/ajax/techpioneers25@gmail.com", {
+			method: "POST",
+			body: formData,
+			headers: {
+			  'Accept': 'application/json'
 			}
+		  })
+		  .then(response => {
+			if (response.ok) {
+			  window.location.href = "thank-you.html";
+			} else {
+			  alert("❌ Message failed to send. Please try again.");
+			}
+		  })
+		  .catch(error => {
+			alert("❌ Network error. Please try again.");
+			console.error(error);
+		  });
+		});
+	
+		// Highlight active navbar link
+		const currentPage = window.location.pathname.split("/").pop();
+		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+		  if (link.getAttribute('href') === currentPage || link.getAttribute('href') === "") {
+			link.classList.add("active");
+		  }
 		});
 	</script>
 
