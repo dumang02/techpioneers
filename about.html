@@ -5,7 +5,8 @@
   <title>About Tech Pioneers | Web Development Experts</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Learn about Tech Pioneers, our mission, and our expert web development team helping businesses succeed online." />
+  <meta name="description"
+    content="Learn about Tech Pioneers, our mission, and our expert web development team helping businesses succeed online." />
   <meta name="keywords" content="about tech pioneers, web development, our team, company mission" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
     rel="stylesheet">
@@ -17,6 +18,8 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,38 +59,53 @@
     "reviewBody": "Great team and excellent results!"
   }
   </script>
+
+  <!-- Fix styles -->
   <style>
-		.navbar-nav .nav-link {
-			color: #fff;
-			text-decoration: none;
-			position: relative;
-			padding-bottom: 5px;
-			transition: color 0.2s;
-		}
+    .navbar-nav .nav-link {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 5px;
+      transition: color 0.2s;
+    }
 
-		/* .navbar-nav .nav-link:hover,
-		.navbar-nav .nav-link.active {
-			color: #00bfff !important;
-			text-decoration: underline;
-			font-weight: 600;
-		} */
+    .navbar-nav .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #ff0000;
+      border-radius: 2px;
+    }
 
-		.navbar-nav .nav-link.active::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 3px;
-			background-color: #ff0000;
-			border-radius: 2px;
-		}
-	</style>
+    .hero-wrap .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-wrap .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .breadcrumbs {
+      color: #fff;
+      font-size: 16px;
+      padding: 5px 0;
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body>
-
-
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -99,34 +117,28 @@
       </button>
 
       <div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a href="index.html" class="nav-link">Home</a>
-					<li class="nav-item">
-						<a href="about.html" class="nav-link">About</a>
-					</li>
-					<li class="nav-item">
-						<a href="service.html" class="nav-link">Services</a>
-					</li>
-					<li class="nav-item">
-						<a href="contact.html" class="nav-link">Contact us</a>
-					</li>
-				</ul>
-
-			</div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');"
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/about-2.jpg');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text align-items-end justify-content-center">
-        <div class="col-md-9 ftco-animate pb-5 text-center">
+        <div class="col-md-9 text-center pb-5">
           <h1 class="mb-3 bread">About Us</h1>
           <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                  class="fa fa-chevron-right"></i></a></span> <span>About Us <i class="fa fa-chevron-right"></i></span></p>
+                  class="fa fa-chevron-right"></i></a></span> <span>About Us <i class="fa fa-chevron-right"></i></span>
+          </p>
+
         </div>
       </div>
     </div>
@@ -136,13 +148,9 @@
   <section class="ftco-section bg-white">
     <div class="container">
       <div class="row align-items-center">
-
-        <!-- Left Column: Image -->
         <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
           <img src="tec.jpg" alt="Tech Pioneers Team" class="img-fluid rounded shadow-sm" loading="lazy">
         </div>
-
-        <!-- Right Column: Text -->
         <div class="col-md-6 pl-md-5">
           <h2 class="mb-4">Our Mission</h2>
           <p class="text-muted">
@@ -151,7 +159,7 @@
             and user-friendly web solutions that help businesses succeed online.
           </p>
           <p>Our mission is to create innovative, reliable, and user-centered digital products by blending strategy,
-            design,and development into a smooth, agile process.</p>
+            design, and development into a smooth, agile process.</p>
           <ul class="list-unstyled text-muted">
             <li class="mb-2">✅ Full-Stack Web Development</li>
             <li class="mb-2">✅ Secure & Scalable Architecture</li>
@@ -164,20 +172,16 @@
             <li class="mb-2">✅ Scalable & Future-Proof</li>
             <li class="mb-2">✅ Cost-Effective Solutions</li>
           </ul>
-
-          <p>As a startup, we know the value of bold ideas, fast execution, and strong collaboration. Whether you're
+          <p>
+            As a startup, we know the value of bold ideas, fast execution, and strong collaboration. Whether you're
             launching your first product or looking to enhance your digital presence, we're here to help you every step
-            of the way. <a href="service.html">See our services</a> or <a href="contact.html">contact us</a> for more info.</p>
+            of the way. <a href="service.html">See our services</a> or <a href="contact.html">contact us</a> for more
+            info.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
-
-
- 
-
-
 
   <!-- Footer -->
   <footer class="ftco-footer ftco-footer-2 ftco-section">
@@ -193,8 +197,6 @@
             </p>
           </div>
         </div>
-
-
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Legal</h2>
@@ -210,8 +212,7 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91
-                      7984778738</span></a></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 7984778738</span></a></li>
                 <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span
                       class="text">techpioneers25@gmail.com</span></a></li>
               </ul>
@@ -221,33 +222,30 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-
-          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          <p>
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script> All rights reserved.
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
         </div>
       </div>
     </div>
   </footer>
 
-
+  <!-- JS Scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.min.js"></script>
   <script>
-		// Get current page URL
-		const currentPage = window.location.pathname.split("/").pop();
+    // Highlight active link in navbar
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      if (link.getAttribute('href') === currentPage || link.getAttribute('href') === "") {
+        link.classList.add("active");
+      }
+    });
+  </script>
 
-		// Loop through all navbar links
-		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-			if (link.getAttribute('href') === currentPage || link.getAttribute('href') === "") {
-				link.classList.add("active");
-			}
-		});
-	</script>
 </body>
 
 </html>
