@@ -102,6 +102,32 @@
       padding: 5px 0;
       display: inline-block;
     }
+
+    .ftco-footer-social .fa-linkedin {
+      color: #0077b5 !important;
+    }
+
+    .ftco-footer-social .fa-instagram {
+      color: #E1306C !important;
+    }
+
+    #scroll-navbar {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: top 0.3s;
+    }
+    #scroll-navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+    #scroll-navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -110,22 +136,30 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Tech <span>Pioneers</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
+        <a class="navbar-brand" href="index.html">Tech<span>Pioneers</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="service.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact us</a>
+                </li>
+            </ul>
+
+        </div>
     </div>
-  </nav>
+</nav>
 
   <!-- Hero Section -->
   <section class="hero-wrap hero-wrap-2" style="background-image: url('images/about-2.jpg');"
@@ -195,8 +229,24 @@
               building innovative, reliable, and user-centered digital products. We help businesses thrive
               through technology, delivering scalable and impactful solutions.
             </p>
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/company/techpioneers2025" target="_blank">
+                  <span class="fa fa-linkedin"></span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/techpioneers2025?utm_source=qr&igsh=MWx5aDk3M2tsOW90eA=="
+                  target="_blank">
+                  <span class="fa fa-instagram"></span>
+                </a>
+              </li>
+            </ul>
+
           </div>
         </div>
+
+
         <div class="col-md">
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Legal</h2>
@@ -212,7 +262,8 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91 7984778738</span></a></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+91
+                      7984778738</span></a></li>
                 <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span
                       class="text">techpioneers25@gmail.com</span></a></li>
               </ul>
@@ -222,9 +273,11 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script> All rights reserved.
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
         </div>
       </div>
@@ -236,12 +289,37 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.min.js"></script>
+
+
   <script>
-    // Highlight active link in navbar
+    // Get current page URL
     const currentPage = window.location.pathname.split("/").pop();
+
+    // Loop through all navbar links
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
       if (link.getAttribute('href') === currentPage || link.getAttribute('href') === "") {
         link.classList.add("active");
+      }
+    });
+  </script>
+
+  <nav id="scroll-navbar" style="display:none; position:fixed; top:0; left:0; width:100%; z-index:999;">
+    <!-- Your navbar content here -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('scroll-navbar');
+      if (window.scrollY > 100) { // Show after 100px scroll
+        navbar.style.display = 'block';
+      } else {
+        navbar.style.display = 'none';
       }
     });
   </script>
