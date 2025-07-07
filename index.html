@@ -44,6 +44,16 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<style>
+		/* Critical CSS for navbar */
+		.navbar {
+			background: #222;
+			padding: 1rem 0;
+		}
+		.navbar-brand {
+			font-weight: 700;
+			color: #fff;
+			font-size: 2rem;
+		}
 		.navbar-nav .nav-link {
 			color: #fff;
 			text-decoration: none;
@@ -51,14 +61,6 @@
 			padding-bottom: 5px;
 			transition: color 0.2s;
 		}
-
-		/* .navbar-nav .nav-link:hover, */
-		/* .navbar-nav .nav-link.active {
-			color: #00bfff !important;
-			text-decoration: underline;
-			font-weight: 600;
-		} */
-
 		.navbar-nav .nav-link.active::after {
 			content: "";
 			position: absolute;
@@ -69,74 +71,42 @@
 			background-color: #ff0000;
 			border-radius: 2px;
 		}
+		/* Critical CSS for hero section */
+		.hero-wrap {
+			width: 100%;
+			min-height: 100vh;
+			background-size: cover;
+			background-position: center center;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.hero-wrap .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+			z-index: 1;
+		}
+		.hero-wrap .container {
+			position: relative;
+			z-index: 2;
+		}
+		.hero-wrap h1, .hero-wrap h2, .hero-wrap p {
+			color: #fff;
+		}
 	</style>
 
-	<script src="js/main.min.js"></script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Service",
-		"serviceType": "Web Development & Digital Solutions",
-		"provider": {
-			"@type": "Organization",
-			"name": "Tech Pioneers",
-			"url": "https://yourdomain.com/"
-		},
-		"areaServed": "Worldwide",
-		"description": "Custom web development, UI/UX design, e-commerce, hosting, and responsive design for startups and businesses.",
-		"hasOfferCatalog": {
-			"@type": "OfferCatalog",
-			"name": "Our Services",
-			"itemListElement": [
-				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Web Development"}},
-				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Hosting & Domain Setup"}},
-				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-commerce Solutions"}},
-				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Backend Development"}},
-				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsive Design"}}
-			]
-		}
-	}
-	</script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": [
-			{"@type": "Question", "name": "What services do you offer?", "acceptedAnswer": {"@type": "Answer", "text": "We offer web development, UI/UX design, e-commerce, hosting, and more."}},
-			{"@type": "Question", "name": "How long does a typical project take?", "acceptedAnswer": {"@type": "Answer", "text": "Project timelines vary, but most websites are completed in 2-6 weeks."}},
-			{"@type": "Question", "name": "What is your pricing model?", "acceptedAnswer": {"@type": "Answer", "text": "We offer fixed-price and hourly models depending on project scope."}},
-			{"@type": "Question", "name": "How do you ensure website security?", "acceptedAnswer": {"@type": "Answer", "text": "We use secure coding practices, SSL, and regular updates to keep sites safe."}}
-		]
-	}
-	</script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Review",
-		"itemReviewed": {
-			"@type": "Organization",
-			"name": "Tech Pioneers"
-		},
-		"reviewRating": {
-			"@type": "Rating",
-			"ratingValue": "5",
-			"bestRating": "5"
-		},
-		"author": {
-			"@type": "Person",
-			"name": "John Doe"
-		},
-		"reviewBody": "Excellent service and support! Highly recommended."
-	}
-	</script>
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-XXXXXXXXXX');
-	</script>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap">
+	<link rel="preload" as="image" href="images/bg_1.jpg">
+	<!-- If you have a WebP version, also preload it: -->
+	<!-- <link rel="preload" as="image" href="images/bg_1.webp"> -->
+	<!-- Preconnect for Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
 
@@ -263,7 +233,7 @@ MOBILE RESPONSIVENESS CHECKLIST
 							<h3>E-commerce Solutions</h3>
 							<p>E-commerce solutions refer to complete systems that allow businesses to sell products or
 								services online, manage inventory, accept payments, and streamline the shopping
-								experience — all through a custom-built or platform-based website. <a href="contact.html">Contact Tech Pioneers for e-commerce solutions</a>.</p>
+								experience — all through a custom-built or platform-based website.</p>
 						</div>
 					</div>
 				</div>
@@ -299,76 +269,76 @@ MOBILE RESPONSIVENESS CHECKLIST
 	</section>
 
 
-	<section class="ftco-section ftco-no-pt">
+	<section class="ftco-section">
 		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h2 class="mb-4">Our Strategic <span>Work</span></h2>
-				</div>
+		  <div class="row justify-content-center pb-5">
+			<div class="col-md-12 heading-section text-center">
+			  <h2 class="mb-4">Our Strategic <span>Work</span></h2>
 			</div>
-			<div class="row">
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<div class="img">
-							<img src="1.jpg" class="img-fluid" alt="Web Development Project 1" loading="lazy">
-						</div>
-						<div class="text text-center">
-							<span>Web Development</span>
-							<h3><a href="project.html">Best Solution for Information Technology</a></h3>
-						</div>
-						<a href="images/work-1.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="fa fa-expand"></span>
-						</a>
-					</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-6 col-lg-3">
+			  <div class="project">
+				<div class="img">
+				  <img src="1.jpg" class="img-fluid" alt="Web Development Project 1" loading="lazy">
 				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<div class="img">
-							<img src="8.jpg" class="img-fluid" alt="Web Application Project 2" loading="lazy">
-						</div>
-						<div class="text text-center">
-							<span>Web Application</span>
-							<h3><a href="project.html">Creative Idea Build Up</a></h3>
-						</div>
-						<a href="images/work-2.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="fa fa-expand"></span>
-						</a>
-					</div>
+				<div class="text text-center">
+				  <span>Web Development</span>
+				  <h3><a href="project.html">Best Solution for Information Technology</a></h3>
 				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<div class="img">
-							<img src="2.jpg" class="img-fluid" alt="Web Design Concept Project 3" loading="lazy">
-						</div>
-						<div class="text text-center">
-							<span>Web Development</span>
-							<h3><a href="project.html">Web Design Concept &amp; Web Analysis</a></h3>
-						</div>
-						<a href="3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="fa fa-expand"></span>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="project">
-						<div class="img">
-							<img src="ui.jpg" class="img-fluid" alt="UI/UX Strategy Project 4" loading="lazy">
-						</div>
-						<div class="text text-center">
-							<span>UI/UX Strategy</span>
-							<h3><a href="project.html">Strategy for Enduring Customer Relationships</a></h3>
-						</div>
-						<a href="images/work-4.jpg"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="fa fa-expand"></span>
-						</a>
-					</div>
-				</div>
+				<a href="" class="icon image-popup d-flex justify-content-center align-items-center">
+				  <span class="fa fa-expand"></span>
+				</a>
+			  </div>
 			</div>
+	  
+			<div class="col-md-6 col-lg-3">
+			  <div class="project">
+				<div class="img">
+				  <img src="8.jpg" class="img-fluid" alt="Web Application Project 2" loading="lazy">
+				</div>
+				<div class="text text-center">
+				  <span>Web Application</span>
+				  <h3><a href="project.html">Creative Idea Build Up</a></h3>
+				</div>
+				<a href="" class="icon image-popup d-flex justify-content-center align-items-center">
+				  <span class="fa fa-expand"></span>
+				</a>
+			  </div>
+			</div>
+	  
+			<div class="col-md-6 col-lg-3">
+			  <div class="project">
+				<div class="img">
+				  <img src="2.jpg" class="img-fluid" alt="Web Design Concept Project 3" loading="lazy">
+				</div>
+				<div class="text text-center">
+				  <span>Web Development</span>
+				  <h3><a href="project.html">Web Design Concept &amp; Web Analysis</a></h3>
+				</div>
+				<a href="" class="icon image-popup d-flex justify-content-center align-items-center">
+				  <span class="fa fa-expand"></span>
+				</a>
+			  </div>
+			</div>
+	  
+			<div class="col-md-6 col-lg-3">
+			  <div class="project">
+				<div class="img">
+				  <img src="ui.jpg" class="img-fluid" alt="UI/UX Strategy Project 4" loading="lazy">
+				</div>
+				<div class="text text-center">
+				  <span>UI/UX Strategy</span>
+				  <h3><a href="project.html">Strategy for Enduring Customer Relationships</a></h3>
+				</div>
+				<a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+				  <span class="fa fa-expand"></span>
+				</a>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</section>
+	  </section>
 
 
 
@@ -446,21 +416,20 @@ MOBILE RESPONSIVENESS CHECKLIST
 		</svg></div>
 
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="js/google-map.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/jquery.min.js" defer></script>
+	<script src="js/jquery-migrate-3.0.1.min.js" defer></script>
+	<script src="js/popper.min.js" defer></script>
+	<script src="js/bootstrap.min.js" defer></script>
+	<script src="js/jquery.easing.1.3.js" defer></script>
+	<script src="js/jquery.waypoints.min.js" defer></script>
+	<script src="js/jquery.stellar.min.js" defer></script>
+	<!-- <script src="js/owl.carousel.min.js" defer></script> -->
+	<!-- <script src="js/jquery.magnific-popup.min.js" defer></script> -->
+	<script src="js/jquery.animateNumber.min.js" defer></script>
+	<script src="js/scrollax.min.js" defer></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false" defer></script> -->
+	<!-- <script src="js/google-map.js" defer></script> -->
+	<script src="js/main.js" defer></script>
 
 	<script>
 		const currentPage = window.location.pathname.split("/").pop();
@@ -473,4 +442,5 @@ MOBILE RESPONSIVENESS CHECKLIST
 
 </body>
 
+<script src="js/main.min.js" defer></script>
 </html>
