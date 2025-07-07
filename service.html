@@ -2,9 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>Tech Pioneers - Contact Us</title>
+    <title>Our Services | Tech Pioneers</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore the full range of web development and digital solutions offered by Tech Pioneers." />
+    <meta name="keywords" content="services, web development, digital solutions, tech pioneers" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tech Pioneers",
+      "url": "https://yourdomain.com/",
+      "logo": "https://yourdomain.com/images/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+91-7984778738",
+        "contactType": "customer service",
+        "email": "techpioneers25@gmail.com"
+      }],
+      "sameAs": [
+        "https://www.linkedin.com/company/techpioneers2025",
+        "https://www.instagram.com/techpioneers2025"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Tech Pioneers"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sam Patel"
+      },
+      "reviewBody": "Outstanding range of services and great support!"
+    }
+    </script>
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
         rel="stylesheet">
@@ -30,7 +72,7 @@
 
 
     <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -127,6 +169,52 @@
             color: #6c757d;
         }
     </style>
+    <script src="js/main.min.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Development & Digital Solutions",
+      "provider": {
+        "@type": "Organization",
+        "name": "Tech Pioneers",
+        "url": "https://yourdomain.com/"
+      },
+      "areaServed": "Worldwide",
+      "description": "Custom web development, UI/UX design, e-commerce, hosting, and responsive design for startups and businesses.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Our Services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Web Development"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Hosting & Domain Setup"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-commerce Solutions"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Backend Development"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsive Design"}}
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What services do you offer?", "acceptedAnswer": {"@type": "Answer", "text": "We offer web development, UI/UX design, e-commerce, hosting, and more."}},
+        {"@type": "Question", "name": "How long does a typical project take?", "acceptedAnswer": {"@type": "Answer", "text": "Project timelines vary, but most websites are completed in 2-6 weeks."}},
+        {"@type": "Question", "name": "What is your pricing model?", "acceptedAnswer": {"@type": "Answer", "text": "We offer fixed-price and hourly models depending on project scope."}},
+        {"@type": "Question", "name": "How do you ensure website security?", "acceptedAnswer": {"@type": "Answer", "text": "We use secure coding practices, SSL, and regular updates to keep sites safe."}}
+      ]
+    }
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 
 <body>
@@ -160,15 +248,20 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');"
-        data-stellar-background-ratio="0.5">
+    <!-- Hero Section -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
-
-        </div>
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 text-center ftco-animate pb-5">
+                    <h1 class="mb-3 bread">Our Services</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Services <i class="fa fa-chevron-right"></i></span></p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Services Content -->
     <section class="ftco-section bg-light">
         <div class="container">
           <div class="row justify-content-center mb-5">
@@ -309,8 +402,6 @@
         </div>
       </section>
       
-    
-
 
     <section class="ftco-section py-5">
         <div class="container">
@@ -326,37 +417,37 @@
 
                 <!-- Shopify -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/django.png" alt="Shopify" style="height:50px;">
+                    <img src="images/tech/django.png" alt="Shopify Technology" style="height:50px;" loading="lazy">
                     <p class="mt-2">Django</p>
                 </div>
 
                 <!-- PHP -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/php.png" alt="PHP" class="tech-icon" loading="lazy">
+                    <img src="images/tech/php.png" alt="PHP Technology" class="tech-icon" loading="lazy">
                     <p class="mt-2">PHP</p>
                 </div>
 
                 <!-- HTML5 -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/html5.png" alt="HTML5" class="tech-icon" loading="lazy">
+                    <img src="images/tech/html5.png" alt="HTML5 Technology" class="tech-icon" loading="lazy">
                     <p class="mt-2">HTML5</p>
                 </div>
 
                 <!-- CSS3 -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/css-3.png" alt="CSS3" class="tech-icon" loading="lazy">
+                    <img src="images/tech/css-3.png" alt="CSS3 Technology" class="tech-icon" loading="lazy">
                     <p class="mt-2">CSS3</p>
                 </div>
 
                 <!-- JavaScript -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/js.png" alt="JavaScript" class="tech-icon" loading="lazy">
+                    <img src="images/tech/js.png" alt="JavaScript Technology" class="tech-icon" loading="lazy">
                     <p class="mt-2">JavaScript</p>
                 </div>
 
                 <!-- MySQL -->
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <img src="images/tech/mysql.png" alt="MySQL" class="tech-icon" loading="lazy">
+                    <img src="images/tech/mysql.png" alt="MySQL Technology" class="tech-icon" loading="lazy">
                     <p class="mt-2">MySQL</p>
                 </div>
 
@@ -387,7 +478,7 @@
                         <ul class="list-unstyled">
                             <li><a href="privacy.html" class="py-2 d-block">Privacy &amp; Policy</a></li>
                             <li><a href="terms.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
-                            <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                            <li><a href="contact.html" class="py-2 d-block">Contact Tech Pioneers</a></li>
                         </ul>
                     </div>
                 </div>

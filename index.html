@@ -2,9 +2,32 @@
 <html lang="en">
 
 <head>
-	<title>Tech Pioneers</title>
+	<title>Professional Web Development | Tech Pioneers</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Tech Pioneers offers professional web development, design, and digital solutions. Fast, secure, and mobile-friendly websites." />
+	<meta name="keywords" content="web development, responsive design, tech pioneers, bootstrap website, digital solutions" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Tech Pioneers",
+		"url": "https://yourdomain.com/",
+		"logo": "https://yourdomain.com/images/logo.png",
+		"contactPoint": [{
+			"@type": "ContactPoint",
+			"telephone": "+91-7984778738",
+			"contactType": "customer service",
+			"email": "techpioneers25@gmail.com"
+		}],
+		"sameAs": [
+			"https://www.linkedin.com/company/techpioneers2025",
+			"https://www.instagram.com/techpioneers2025"
+		]
+	}
+	</script>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
 		rel="stylesheet">
@@ -19,7 +42,7 @@
 
 
 	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 	<style>
 		.navbar-nav .nav-link {
 			color: #fff;
@@ -48,13 +71,86 @@
 		}
 	</style>
 
+	<script src="js/main.min.js"></script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"serviceType": "Web Development & Digital Solutions",
+		"provider": {
+			"@type": "Organization",
+			"name": "Tech Pioneers",
+			"url": "https://yourdomain.com/"
+		},
+		"areaServed": "Worldwide",
+		"description": "Custom web development, UI/UX design, e-commerce, hosting, and responsive design for startups and businesses.",
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Our Services",
+			"itemListElement": [
+				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Web Development"}},
+				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Hosting & Domain Setup"}},
+				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-commerce Solutions"}},
+				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Backend Development"}},
+				{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsive Design"}}
+			]
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{"@type": "Question", "name": "What services do you offer?", "acceptedAnswer": {"@type": "Answer", "text": "We offer web development, UI/UX design, e-commerce, hosting, and more."}},
+			{"@type": "Question", "name": "How long does a typical project take?", "acceptedAnswer": {"@type": "Answer", "text": "Project timelines vary, but most websites are completed in 2-6 weeks."}},
+			{"@type": "Question", "name": "What is your pricing model?", "acceptedAnswer": {"@type": "Answer", "text": "We offer fixed-price and hourly models depending on project scope."}},
+			{"@type": "Question", "name": "How do you ensure website security?", "acceptedAnswer": {"@type": "Answer", "text": "We use secure coding practices, SSL, and regular updates to keep sites safe."}}
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Review",
+		"itemReviewed": {
+			"@type": "Organization",
+			"name": "Tech Pioneers"
+		},
+		"reviewRating": {
+			"@type": "Rating",
+			"ratingValue": "5",
+			"bestRating": "5"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "John Doe"
+		},
+		"reviewBody": "Excellent service and support! Highly recommended."
+	}
+	</script>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-XXXXXXXXXX');
+	</script>
+
 </head>
 
 <body>
 
+<!--
+MOBILE RESPONSIVENESS CHECKLIST
+- Test all pages in mobile view (browser dev tools)
+- Ensure navigation menus are usable on small screens
+- Images and text should resize and not overflow
+- Use responsive image classes (img-fluid in Bootstrap)
+-->
 
-
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" aria-label="Main navigation">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">Tech <span>Pioneers</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -94,8 +190,10 @@
 
 					<h1 class="mb-4 line" style="color: #fff; font-size: 3.5rem; font-weight: 700;"
 						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-						Welcome <br>To <br> <span style="color: #0418f5;">Tech Pioneers</span>
+						Welcome to <span style="color: #0418f5;">Tech Pioneers</span>
 					</h1>
+
+					<h2 class="mb-4" style="color: #fff; font-size: 2rem;">Professional Web Development & Digital Solutions</h2>
 
 					<p class="mb-4 lead" style="color: #f8f5f5; font-size: 1.3rem;"
 						data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><b>
@@ -106,6 +204,8 @@
 						style="font-size: 1rem; border-radius: 30px;">
 						Let's Work Together
 					</a>
+
+					<p class="mt-3"><a href="about.html">Learn more about Tech Pioneers</a> | <a href="service.html">Explore our web development services</a></p>
 
 				</div>
 			</div>
@@ -134,13 +234,12 @@
 						<div class="text">
 							<h3>Custom Web Development</h3>
 							<p>Custom Web Development refers to the process of designing and building websites from
-								scratch, tailored specifically to the needs and goals of a business or individual
-							</p>
+								scratch, tailored specifically to the needs and goals of a business or individual. <a href="contact.html">Get in touch with our team</a> to discuss your project.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<img src="images/services.svg" class="img-fluid" alt="">
+					<img src="images/services.svg" class="img-fluid" alt="Our Services Icon" loading="lazy">
 				</div>
 				<div class="col-md-4">
 					<div class="services-2 text-center">
@@ -150,8 +249,7 @@
 						<div class="text">
 							<h3>Web Hosting & Domain Setup</h3>
 							<p>Web hosting and domain setup involve selecting a reliable web hosting provider and
-								registering a domain name to establish an online presence.
-							</p>
+								registering a domain name to establish an online presence. <a href="service.html">See all our services</a>.</p>
 						</div>
 					</div>
 				</div>
@@ -165,8 +263,7 @@
 							<h3>E-commerce Solutions</h3>
 							<p>E-commerce solutions refer to complete systems that allow businesses to sell products or
 								services online, manage inventory, accept payments, and streamline the shopping
-								experience — all through a custom-built or platform-based website.
-							</p>
+								experience — all through a custom-built or platform-based website. <a href="contact.html">Contact Tech Pioneers for e-commerce solutions</a>.</p>
 						</div>
 					</div>
 				</div>
@@ -213,7 +310,7 @@
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="project">
 						<div class="img">
-							<img src="1.jpg" class="img-fluid" alt="Colorlib Template">
+							<img src="1.jpg" class="img-fluid" alt="Web Development Project 1" loading="lazy">
 						</div>
 						<div class="text text-center">
 							<span>Web Development</span>
@@ -228,7 +325,7 @@
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="project">
 						<div class="img">
-							<img src="8.jpg" class="img-fluid" alt="Colorlib Template">
+							<img src="8.jpg" class="img-fluid" alt="Web Application Project 2" loading="lazy">
 						</div>
 						<div class="text text-center">
 							<span>Web Application</span>
@@ -243,7 +340,7 @@
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="project">
 						<div class="img">
-							<img src="2.jpg" class="img-fluid" alt="Colorlib Template">
+							<img src="2.jpg" class="img-fluid" alt="Web Design Concept Project 3" loading="lazy">
 						</div>
 						<div class="text text-center">
 							<span>Web Development</span>
@@ -257,7 +354,7 @@
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<div class="project">
 						<div class="img">
-							<img src="ui.jpg" class="img-fluid" alt="Colorlib Template">
+							<img src="ui.jpg" class="img-fluid" alt="UI/UX Strategy Project 4" loading="lazy">
 						</div>
 						<div class="text text-center">
 							<span>UI/UX Strategy</span>
@@ -297,6 +394,7 @@
 									href="https://www.instagram.com/techpioneers2025?utm_source=qr&igsh=MWx5aDk3M2tsOW90eA=="
 									target="_blank"><span class="fa fa-instagram"></span></a></li>
 						</ul>
+						  
 					</div>
 				</div>
 
